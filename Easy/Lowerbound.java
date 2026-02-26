@@ -1,4 +1,5 @@
 class Solution {
+    //this apply in search insert position also
     int lowerBound(int[] arr, int target) {
         // code here
         //we have to find the smallest idx where we got elem which is greater than and equal to target
