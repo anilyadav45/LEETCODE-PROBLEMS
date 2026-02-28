@@ -7,6 +7,10 @@ class Solution {
         //aproach pick up sorted half(left,right ) and take low min and eliminate
         while(low <= high){
            int mid = low + (high - low)/2;
+           //base condtion this early exist the loop 
+           if(nums[low] <= nums[high]){
+            return Math.min(min,nums[low]);
+           }
            //left sorted
            if(nums[low]<=nums[mid]){
              min = Math.min(nums[low],min);
@@ -21,6 +25,8 @@ class Solution {
         return min;
     }
 }
+
+
 
 //approach
 // find left sorted half  and get min = low then eliminate low = mid + 1
